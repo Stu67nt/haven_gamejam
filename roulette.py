@@ -3,7 +3,7 @@ import pygame
 import math
 import random
 
-# pygame setup
+# pgit ygame setup
 pygame.init()
 screen = pygame.display.set_mode((1280, 720))
 font = pygame.font.SysFont("arial", 28, bold=True)

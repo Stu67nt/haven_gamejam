@@ -1,4 +1,5 @@
-
+import roulette
+import button
 import pygame
 
 
@@ -137,9 +138,10 @@ def run(screen, Background):
 
                 if event.type == pygame.MOUSEBUTTONDOWN and event.button == 1:
                     if Game1.button_rect.collidepoint(event.pos):
-                        pass
+                        roulette.run(screen)
+                        OptionsRunning = False
 
-            # Detects mouse hovering over Game 2
+                        # Detects mouse hovering over Game 2
             elif (
                 (MouseX >= Game2.x_pos and MouseX <= Game2.x_pos + 250)
                 and
@@ -150,7 +152,8 @@ def run(screen, Background):
 
                 if event.type == pygame.MOUSEBUTTONDOWN and event.button == 1:
                     if Game2.button_rect.collidepoint(event.pos):
-                        pass
+                        button.run(screen)
+                        OptionsRunning = False
 
             else:
                 pygame.mouse.set_cursor(pygame.SYSTEM_CURSOR_ARROW)
